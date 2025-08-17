@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Poetry Collection</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <h1>Poetry Collection</h1>
+    <ul>
+      <li><a href="#" id="homeLink">Home</a></li>
+      <li><a href="#" id="favoritesLink">Favorites</a></li>
+      <li><a href="#" id="addPoemLink">Add Poem</a></li>
+      <li><button id="themeToggle">🌙 Dark Mode</button></li>
+    </ul>
+  </nav>
+
+  <!-- Search and Filters -->
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="Search poems..."/>
+    <select id="poetFilter">
+      <option value="">All Poets</option>
+      <option value="Rumi">Rumi</option>
+      <option value="William Wordsworth">William Wordsworth</option>
+      <option value="Rabindranath Tagore">Rabindranath Tagore</option>
+      <option value="Emily Dickinson">Emily Dickinson</option>
+      <option value="Pablo Neruda">Pablo Neruda</option>
+      <option value="Maya Angelou">Maya Angelou</option>
+      <option value="Robert Frost">Robert Frost</option>
+      <option value="Gulzar">Gulzar</option>
+      <option value="Sylvia Plath">Sylvia Plath</option>
+      <option value="John Keats">John Keats</option>
+    </select>
+    <select id="themeFilter">
+      <option value="">All Themes</option>
+      <option value="Motivation">Motivation</option>
+      <option value="Love">Love</option>
+      <option value="Friendship">Friendship</option>
+      <option value="Nature">Nature</option>
+      <option value="Life">Life</option>
+    </select>
+  </section>
+
+  <!-- Poems Display -->
+  <section id="poemsContainer" class="poems-container"></section>
+
+  <!-- Add Poem Form -->
+  <section id="addPoemSection" class="hidden">
+    <h2>Add Your Poem</h2>
+    <form id="addPoemForm">
+      <input type="text" id="poetName" placeholder="Poet Name" required />
+      <input type="text" id="poemTitle" placeholder="Poem Title" required />
+      <select id="poemTheme" required>
+        <option value="">Select Theme</option>
+        <option value="Motivation">Motivation</option>
+        <option value="Love">Love</option>
+        <option value="Friendship">Friendship</option>
+        <option value="Nature">Nature</option>
+        <option value="Life">Life</option>
+      </select>
+      <textarea id="poemContent" placeholder="Write your poem here..." required></textarea>
+      <button type="submit">Add Poem</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #e2ecea;
+  --text: #000000;
+  --card-bg: #a7ba267d;
+}
+
+.dark-mode {
+  --bg: #1e1e1e;
+  --text: #238d1a;
+  --card-bg: #333333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #444;
+  color: rgb(154, 189, 30);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar h1 {
+  margin: 0;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.navbar a, .navbar button {
+  color: oklch(65.5% 0.12092 169.845);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.navbar button:hover, .navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Controls */
+.controls {
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--card-bg);
+}
+.controls input, .controls select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Poems */
+.poems-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.poem-card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(28, 108, 130, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+.poem-card h3 {
+  margin-top: 0;
+}
+.poem-card .theme-tag {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.theme-Motivation { background-color: #4760e1; color: #ffffff; }
+.theme-Love { background-color: #e91e63; color: white; }
+.theme-Friendship { background-color: #d2a51d; color: white; }
+.theme-Nature { background-color: #83f321; color: white; }
+.theme-Life { background-color: #9c27b0; color: white; }
+
+/* Add Poem */
+#addPoemSection {
+  padding: 1rem;
+}
+#addPoemForm input, #addPoemForm select, #addPoemForm textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#addPoemForm button {
+  padding: 0.5rem 1rem;
+  background-color: lab(33.22% -19.72 -7.89 / 0);
+  color: oklch(38.021% 0.24274 265.133 / 0.329);
+  border: none;
+  cursor: pointer;
+}
+#addPoemForm button:hover {
+  background-color: #666;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
